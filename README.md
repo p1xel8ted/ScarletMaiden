@@ -11,7 +11,7 @@
 
 ## Note
 - Comes bundled with ConfigurationManager allowing you to press F2 and change mod settings ingame.
-- Press NumpadPlus and NumpadMinus to fine tune zoom.
+- Press NumpadPlus and NumpadMinus to fine tune zoom. NumpadMultiply(Star) will reset to original.
 
 ## Installation
 - Grab the latest release of Scarlet Maiden Ultra-wide Fix from [here.](https://github.com/p1xel8ted/ScarletMaiden/releases)
