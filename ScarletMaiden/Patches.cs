@@ -39,8 +39,6 @@ public static class Patches
             .Where(mode => mode.width == currentRes.Item1 && mode.height == currentRes.Item2)
             .Max(mode => mode.refreshRate);
 
-        Plugin.LOG.LogWarning($"Highest supported refresh rate at {Display.main.systemWidth}x{Display.main.systemHeight} is {highestRefreshRate}");
-
         cameraFix.targetFramerate = highestRefreshRate;
         Application.targetFrameRate = highestRefreshRate;
     }
@@ -79,6 +77,7 @@ public static class Patches
 
         var increaseZoom = Plugin.IncreaseZoom.Value.IsUp();
         var decreaseZoom = Plugin.DecreaseZoom.Value.IsUp();
+        var reset = Plugin.Reset.Value.IsUp();
 
         var orthographicSize = __instance.cam.orthographicSize;
 
@@ -92,6 +91,10 @@ public static class Patches
         }
         else
         {
+            if (reset)
+            {
+                Plugin.ResetZoom();
+            }
             return;
         }
 

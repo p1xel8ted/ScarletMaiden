@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net481</TargetFramework>
-    <AssemblyName>ScarletMaiden</AssemblyName>
+    <AssemblyName>ScarletMaidenUltraWideFixes</AssemblyName>
     <Description>My first plugin</Description>
     <Version>0.0.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
