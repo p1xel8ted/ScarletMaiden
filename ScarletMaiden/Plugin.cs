@@ -12,7 +12,7 @@ namespace ScarletMaiden
     {
         private const string PluginGuid = "p1xel8ted.scarletmaiden.uwfixes";
         private const string PluginName = "Scarlet Maiden UltraWide Fixes";
-        private const string PluginVersion = "0.0.1";
+        private const string PluginVersion = "0.0.2";
         public static ManualLogSource LOG { get; private set; }
         internal static ConfigEntry<bool> EnableCustomOrthographicSize { get; set; }
         internal static ConfigEntry<float> CustomOrthographicSize { get; set; }

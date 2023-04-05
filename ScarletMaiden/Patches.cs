@@ -68,6 +68,7 @@ public static class Patches
             __instance.pointerIndex = 10;
         }
     }
+    
 
     [HarmonyPostfix]
     [HarmonyPatch(typeof(CameraFix), nameof(CameraFix.Update))]
@@ -101,15 +102,12 @@ public static class Patches
         __instance.cam.orthographicSize = orthographicSize;
         Plugin.CustomOrthographicSize.Value = orthographicSize;
     }
-
+    
     [HarmonyPrefix]
     [HarmonyPatch(typeof(OttersideSplash), nameof(OttersideSplash.Start))]
-    public static bool OttersideSplash_Start(ref OttersideSplash __instance)
+    public static void OttersideSplash_Start(ref OttersideSplash __instance)
     {
-        //skip the splash screen
-        __instance.StartCoroutine(__instance.InitLocalizationsCoroutine());
-        GameManager.instance.ExitSplashSceen();
-        return false;
+        __instance.LoadNextScene();
     }
 
     [HarmonyPostfix]
